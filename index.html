@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>docket.gg — Coming Soon</title>
+  <meta name="description" content="Tracking the federal court backlog. 400,000+ cases pending. Find yours." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0D1B2A;
+      color: #E2E8F0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 680px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 3.5rem;
+      font-weight: 800;
+      letter-spacing: -2px;
+      margin-bottom: 0.5rem;
+    }
+    .logo span { color: #14B8A6; }
+
+    .tagline {
+      font-size: 1.05rem;
+      color: #94A3B8;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: #0D9488;
+      margin: 0 auto 2.5rem;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      color: #F8FAFC;
+      line-height: 1.3;
+    }
+
+    .lede {
+      color: #94A3B8;
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .stat-banner {
+      background: rgba(13, 148, 136, 0.1);
+      border: 1px solid rgba(13, 148, 136, 0.3);
+      border-radius: 14px;
+      padding: 2rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .stat-number {
+      font-size: 3.8rem;
+      font-weight: 800;
+      color: #14B8A6;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .stat-label {
+      font-size: 1.05rem;
+      color: #E2E8F0;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .stat-sub {
+      font-size: 0.9rem;
+      color: #64748B;
+      line-height: 1.5;
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .stat-card {
+      background: rgba(27, 58, 107, 0.2);
+      border: 1px solid rgba(44, 82, 130, 0.3);
+      border-radius: 10px;
+      padding: 1.2rem 0.75rem;
+    }
+    .stat-card-number {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #F8FAFC;
+      letter-spacing: -1px;
+      margin-bottom: 0.25rem;
+    }
+    .stat-card-label {
+      font-size: 0.8rem;
+      color: #64748B;
+      line-height: 1.4;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #0D9488;
+      margin-bottom: 1rem;
+    }
+
+    .body-text {
+      color: #94A3B8;
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+      text-align: left;
+    }
+    .feature {
+      background: rgba(27, 58, 107, 0.15);
+      border: 1px solid rgba(44, 82, 130, 0.25);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+    .feature-icon {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .feature-title {
+      font-weight: 600;
+      color: #F1F5F9;
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+    }
+    .feature p {
+      font-size: 0.87rem;
+      color: #64748B;
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .closing {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(44, 82, 130, 0.25);
+      color: #64748B;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .closing strong { color: #94A3B8; }
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #334155;
+    }
+
+    @media (max-width: 520px) {
+      .logo { font-size: 2.6rem; }
+      .stat-number { font-size: 2.8rem; }
+      .stats-row { grid-template-columns: 1fr 1fr; }
+      .stats-row .stat-card:last-child { grid-column: 1 / -1; }
+      .features { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="logo">docket<span>.</span>gg</div>
+    <div class="tagline">Federal Court Accountability Starts Here</div>
+    <div class="divider"></div>
+
+    <h1>The backlog is real. Now you can see it.</h1>
+
+    <p class="lede">
+      Hundreds of thousands of cases sit in federal courts right now, waiting.
+      Most people have no idea where their case stands, how long others have waited,
+      or whether their court is completely overwhelmed. That changes soon.
+    </p>
+
+    <div class="stat-banner">
+      <div class="stat-number">398,121</div>
+      <div class="stat-label">Civil cases pending in federal courts right now</div>
+      <div class="stat-sub">That number grows every single day. Most of these people are waiting more than two years just to get to trial.</div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-card-number">346%</div>
+        <div class="stat-card-label">Rise in cases waiting 3+ years since 2004</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-number">677</div>
+        <div class="stat-card-label">Federal judges for 746,000+ pending cases</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-number">2+ yrs</div>
+        <div class="stat-card-label">Average wait from filing to trial</div>
+      </div>
+    </div>
+
+    <p class="section-label">What We Are Building</p>
+
+    <p class="body-text">
+      Right now there is no easy way for an ordinary person to understand what is
+      happening inside the federal court system. Lawyers know. Journalists with
+      time to dig know. Everyone else is left guessing.
+    </p>
+    <p class="body-text">
+      docket.gg is being built to fix that. One transparent, public tool that tracks
+      how every federal district court is actually performing, and lets anyone look
+      up the status of a real case. No law degree needed. No subscription required.
+    </p>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">📊</div>
+        <div class="feature-title">Court Performance Dashboard</div>
+        <p>See backlog rankings, wait times, and filing trends for all 94 federal district courts. Find out which courts are keeping up and which ones are years behind.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔍</div>
+        <div class="feature-title">Case Lookup</div>
+        <p>Search by case name or number. See where a case stands in the queue and how it compares to everything else sitting in that court.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚖️</div>
+        <div class="feature-title">Judge-Level Tracking</div>
+        <p>Every federal judge carries a different caseload. We track how long cases sit on each docket so the full picture is visible to anyone who wants to look.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📡</div>
+        <div class="feature-title">Always Free, Always Public</div>
+        <p>Court data belongs to the public. Every dashboard, ranking, and case lookup will always be free with no account required.</p>
+      </div>
+    </div>
+
+    <div class="closing">
+      <strong>We are almost ready.</strong> The data is being built and the tools are coming.
+      If you have a case in the federal system right now, or you just want to know
+      how your courts are actually performing, this is being made for you.
+    </div>
+
+    <div class="footer">
+      &copy; 2026 docket.gg
+    </div>
+
+  </div>
+</body>
+</html>
